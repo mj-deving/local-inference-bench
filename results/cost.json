@@ -1,0 +1,158 @@
+{
+ "assumptions": {
+  "_note": "ASSUMPTIONS, not measurements. Every value here is a stated input to results/cost.json. Change them and rerun `uv run bench report`.",
+  "power_w": {
+   "value": 60,
+   "why": "Wall power of a 14-inch M4 Pro laptop under sustained GPU inference. Not measured here: powermetrics needs root. Plausible range 40-90 W."
+  },
+  "eur_per_kwh": {
+   "value": 0.35,
+   "why": "German household electricity price order of magnitude, 2026."
+  },
+  "hardware_eur": {
+   "value": 2800,
+   "why": "Purchase price of a 48 GB M4 Pro laptop, order of magnitude."
+  },
+  "amortization_years": {
+   "value": 3,
+   "why": "Typical depreciation period for a laptop."
+  },
+  "utilization_scenarios": {
+   "value": {
+    "dedicated_24_7": 1.0,
+    "busy_office_hours": 0.25
+   },
+   "why": "Share of the amortization period the machine spends serving. Energy-only is reported separately as the marginal cost of an already-owned machine."
+  },
+  "hosted_price_points_eur_per_m_tokens": {
+   "value": {
+    "small_hosted_model": {
+     "in": 0.1,
+     "out": 0.4
+    },
+    "mid_hosted_model": {
+     "in": 1.0,
+     "out": 4.0
+    }
+   },
+   "why": "Illustrative price tiers, not quotes from a vendor. The robust output is the break-even price, which needs no hosted price at all."
+  }
+ },
+ "configs": {
+  "ollama-q4": {
+   "measured": {
+    "best_concurrency": 2,
+    "tok_per_s": 15.679326837389532,
+    "mean_output_tokens": 73.75,
+    "mean_prompt_tokens": 1666.3125,
+    "answers_per_hour": 765.363750706472
+   },
+   "local_eur_per_1k": {
+    "energy_only": 0.027437933898248855,
+    "dedicated_24_7": 0.16664612211868954,
+    "busy_office_hours": 0.5842706867800116
+   },
+   "hosted_eur_per_1k": {
+    "small_hosted_model": 0.19613125000000003,
+    "mid_hosted_model": 1.9613125
+   },
+   "break_even_blended_eur_per_m_tokens": {
+    "energy_only": 0.01576836113544706,
+    "dedicated_24_7": 0.09577019338023177,
+    "busy_office_hours": 0.33577569011458586
+   }
+  },
+  "llamacpp-q4": {
+   "measured": {
+    "best_concurrency": 8,
+    "tok_per_s": 19.760577653417155,
+    "mean_output_tokens": 75.95833333333333,
+    "mean_prompt_tokens": 1662.3125,
+    "answers_per_hour": 936.5408169255306
+   },
+   "local_eur_per_1k": {
+    "energy_only": 0.02242294155308537,
+    "dedicated_24_7": 0.13618723152307713,
+    "busy_office_hours": 0.4774801014330524
+   },
+   "hosted_eur_per_1k": {
+    "small_hosted_model": 0.19661458333333334,
+    "mid_hosted_model": 1.9661458333333333
+   },
+   "break_even_blended_eur_per_m_tokens": {
+    "energy_only": 0.0128995672728897,
+    "dedicated_24_7": 0.07834638245751528,
+    "busy_office_hours": 0.27468682801139205
+   }
+  },
+  "mlx-4bit": {
+   "measured": {
+    "best_concurrency": 8,
+    "tok_per_s": 21.880652827089406,
+    "mean_output_tokens": 94.0,
+    "mean_prompt_tokens": 1662.3125,
+    "answers_per_hour": 837.982448697041
+   },
+   "local_eur_per_1k": {
+    "energy_only": 0.025060190738663318,
+    "dedicated_24_7": 0.15220474040209972,
+    "busy_office_hours": 0.5336383893924089
+   },
+   "hosted_eur_per_1k": {
+    "small_hosted_model": 0.20383125,
+    "mid_hosted_model": 2.0383125
+   },
+   "break_even_blended_eur_per_m_tokens": {
+    "energy_only": 0.01426863997077019,
+    "dedicated_24_7": 0.08666153682906642,
+    "busy_office_hours": 0.3038402274039551
+   }
+  },
+  "ollama-q8": {
+   "measured": {
+    "best_concurrency": 4,
+    "tok_per_s": 17.971905726617482,
+    "mean_output_tokens": 89.22916666666667,
+    "mean_prompt_tokens": 1666.3125,
+    "answers_per_hour": 725.0864603220875
+   },
+   "local_eur_per_1k": {
+    "energy_only": 0.028962063352654086,
+    "dedicated_24_7": 0.1759030240459777,
+    "busy_office_hours": 0.6167259061259486
+   },
+   "hosted_eur_per_1k": {
+    "small_hosted_model": 0.20232291666666669,
+    "mid_hosted_model": 2.023229166666667
+   },
+   "break_even_blended_eur_per_m_tokens": {
+    "energy_only": 0.016497508377369238,
+    "dedicated_24_7": 0.10019871780085599,
+    "busy_office_hours": 0.35130234607131616
+   }
+  },
+  "llamacpp-q8": {
+   "measured": {
+    "best_concurrency": 8,
+    "tok_per_s": 19.81060215680164,
+    "mean_output_tokens": 83.45833333333333,
+    "mean_prompt_tokens": 1662.3125,
+    "answers_per_hour": 854.53620886054
+   },
+   "local_eur_per_1k": {
+    "energy_only": 0.02457473396943814,
+    "dedicated_24_7": 0.14925628632579602,
+    "busy_office_hours": 0.5233009433948697
+   },
+   "hosted_eur_per_1k": {
+    "small_hosted_model": 0.19961458333333335,
+    "mid_hosted_model": 1.9961458333333333
+   },
+   "break_even_blended_eur_per_m_tokens": {
+    "energy_only": 0.014076723874757219,
+    "dedicated_24_7": 0.08549592161578826,
+    "busy_office_hours": 0.29975351483888135
+   }
+  }
+ }
+}

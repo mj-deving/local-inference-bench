@@ -1,0 +1,343 @@
+{
+  "retrieved": [
+    [
+      "art50-p1",
+      "art99-p3",
+      "art113-p0",
+      "art4-p1"
+    ],
+    []
+  ],
+  "facts": [
+    [
+      "informiert"
+    ],
+    [
+      "35000000|35 millionen",
+      "7 %"
+    ],
+    [
+      "maschinenlesbar",
+      "2. august 2026"
+    ],
+    [
+      "1000x",
+      "12345ab"
+    ],
+    []
+  ],
+  "expectedChunks": [
+    [
+      "art50-p1"
+    ],
+    [
+      "art99-p3",
+      "art99-p4"
+    ],
+    []
+  ],
+  "rows": [
+    {
+      "answer": "Ja, Nutzer werden informiert [chunk:art50-p1].",
+      "citations": [
+        "art50-p1"
+      ],
+      "isRefusal": false,
+      "normalized": "ja, nutzer werden informiert [chunk:art50-p1].",
+      "validity": [
+        1,
+        0
+      ],
+      "refusal": [
+        1,
+        0
+      ],
+      "recall": [
+        1,
+        0,
+        null
+      ],
+      "facts": [
+        1,
+        0,
+        0,
+        0,
+        null
+      ]
+    },
+    {
+      "answer": "Siehe [chunk:art50-p1] und [chunk:art5-p1].",
+      "citations": [
+        "art50-p1",
+        "art5-p1"
+      ],
+      "isRefusal": false,
+      "normalized": "siehe [chunk:art50-p1] und [chunk:art5-p1].",
+      "validity": [
+        0,
+        0
+      ],
+      "refusal": [
+        1,
+        0
+      ],
+      "recall": [
+        1,
+        0,
+        null
+      ],
+      "facts": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ]
+    },
+    {
+      "answer": "[KEINE_GRUNDLAGE] Die abgerufenen Auszüge enthalten dazu keine Grundlage.",
+      "citations": [],
+      "isRefusal": true,
+      "normalized": "[keine_grundlage] die abgerufenen auszüge enthalten dazu keine grundlage.",
+      "validity": [
+        1,
+        1
+      ],
+      "refusal": [
+        0,
+        1
+      ],
+      "recall": [
+        null,
+        null,
+        null
+      ],
+      "facts": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "answer": "[KEINE_GRUNDLAGE] aber [chunk:art99-p3]",
+      "citations": [
+        "art99-p3"
+      ],
+      "isRefusal": true,
+      "normalized": "[keine_grundlage] aber [chunk:art99-p3]",
+      "validity": [
+        1,
+        0
+      ],
+      "refusal": [
+        0,
+        1
+      ],
+      "recall": [
+        null,
+        null,
+        null
+      ],
+      "facts": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "answer": "Eine Antwort ohne Zitat.",
+      "citations": [],
+      "isRefusal": false,
+      "normalized": "eine antwort ohne zitat.",
+      "validity": [
+        0,
+        0
+      ],
+      "refusal": [
+        1,
+        0
+      ],
+      "recall": [
+        0,
+        0,
+        null
+      ],
+      "facts": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ]
+    },
+    {
+      "answer": "Bis zu 35.000.000 EUR oder 7 % [chunk:art99-p3] [chunk:art99-p3]",
+      "citations": [
+        "art99-p3"
+      ],
+      "isRefusal": false,
+      "normalized": "bis zu 35000000 eur oder 7 % [chunk:art99-p3] [chunk:art99-p3]",
+      "validity": [
+        1,
+        0
+      ],
+      "refusal": [
+        1,
+        0
+      ],
+      "recall": [
+        0,
+        0.5,
+        null
+      ],
+      "facts": [
+        0,
+        1,
+        0,
+        0,
+        null
+      ]
+    },
+    {
+      "answer": "Bis zu 35 000 000 EUR [chunk:art99-p3], 15.000.000 [chunk:art99-p4]",
+      "citations": [
+        "art99-p3",
+        "art99-p4"
+      ],
+      "isRefusal": false,
+      "normalized": "bis zu 35000000 eur [chunk:art99-p3], 15000000 [chunk:art99-p4]",
+      "validity": [
+        0,
+        0
+      ],
+      "refusal": [
+        1,
+        0
+      ],
+      "recall": [
+        0,
+        1,
+        null
+      ],
+      "facts": [
+        0,
+        0.5,
+        0,
+        0,
+        null
+      ]
+    },
+    {
+      "answer": "Mehrfach [chunk:art50-p1, chunk:art50-p2] zitiert.",
+      "citations": [],
+      "isRefusal": false,
+      "normalized": "mehrfach [chunk:art50-p1, chunk:art50-p2] zitiert.",
+      "validity": [
+        0,
+        0
+      ],
+      "refusal": [
+        1,
+        0
+      ],
+      "recall": [
+        0,
+        0,
+        null
+      ],
+      "facts": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ]
+    },
+    {
+      "answer": "Ab dem 2. August 2026 MASCHINENLESBAR [chunk:art113-p0]",
+      "citations": [
+        "art113-p0"
+      ],
+      "isRefusal": false,
+      "normalized": "ab dem 2. august 2026 maschinenlesbar [chunk:art113-p0]",
+      "validity": [
+        1,
+        0
+      ],
+      "refusal": [
+        1,
+        0
+      ],
+      "recall": [
+        0,
+        0,
+        null
+      ],
+      "facts": [
+        0,
+        0,
+        1,
+        0,
+        null
+      ]
+    },
+    {
+      "answer": "1.000x und 12.345ab [chunk:art4-p1]",
+      "citations": [
+        "art4-p1"
+      ],
+      "isRefusal": false,
+      "normalized": "1.000x und 12.345ab [chunk:art4-p1]",
+      "validity": [
+        1,
+        0
+      ],
+      "refusal": [
+        1,
+        0
+      ],
+      "recall": [
+        0,
+        0,
+        null
+      ],
+      "facts": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ]
+    },
+    {
+      "answer": "",
+      "citations": [],
+      "isRefusal": false,
+      "normalized": "",
+      "validity": [
+        0,
+        0
+      ],
+      "refusal": [
+        1,
+        0
+      ],
+      "recall": [
+        0,
+        0,
+        null
+      ],
+      "facts": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ]
+    }
+  ]
+}

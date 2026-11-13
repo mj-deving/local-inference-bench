@@ -1,0 +1,27 @@
+{
+  "_note": "ASSUMPTIONS, not measurements. Every value here is a stated input to results/cost.json. Change them and rerun `uv run bench report`.",
+  "power_w": {
+    "value": 60,
+    "why": "Wall power of a 14-inch M4 Pro laptop under sustained GPU inference. Not measured here: powermetrics needs root. Plausible range 40-90 W."
+  },
+  "eur_per_kwh": {
+    "value": 0.35,
+    "why": "German household electricity price order of magnitude, 2026."
+  },
+  "hardware_eur": {
+    "value": 2800,
+    "why": "Purchase price of a 48 GB M4 Pro laptop, order of magnitude."
+  },
+  "amortization_years": {
+    "value": 3,
+    "why": "Typical depreciation period for a laptop."
+  },
+  "utilization_scenarios": {
+    "value": {"dedicated_24_7": 1.0, "busy_office_hours": 0.25},
+    "why": "Share of the amortization period the machine spends serving. Energy-only is reported separately as the marginal cost of an already-owned machine."
+  },
+  "hosted_price_points_eur_per_m_tokens": {
+    "value": {"small_hosted_model": {"in": 0.10, "out": 0.40}, "mid_hosted_model": {"in": 1.00, "out": 4.00}},
+    "why": "Illustrative price tiers, not quotes from a vendor. The robust output is the break-even price, which needs no hosted price at all."
+  }
+}

@@ -1,0 +1,1938 @@
+{
+ "configs": {
+  "ollama-q4": {
+   "config": {
+    "name": "ollama-q4",
+    "runtime": "ollama",
+    "quant": "Q4_K_M",
+    "model": "qwen3:8b",
+    "port": 11500
+   },
+   "cold": {
+    "launch_to_first_token_s": {
+     "mean": 12.898240486669238,
+     "stdev": 11.843461649366859,
+     "min": 6.037957334003295,
+     "max": 26.573867416998837,
+     "n": 3
+    },
+    "ready_s": {
+     "mean": 2.9796716946705906,
+     "stdev": 4.710445453514077,
+     "min": 0.21980316700501135,
+     "max": 8.418625625003187,
+     "n": 3
+    },
+    "peak_rss_mb": 14387,
+    "peak_footprint_mb": 14364
+   },
+   "warm": {
+    "ttft_p50": {
+     "mean": 3.379593562334776,
+     "stdev": 0.18791159991008016,
+     "min": 3.2226551250023476,
+     "max": 3.587826083003165,
+     "n": 3
+    },
+    "ttft_p95": {
+     "mean": 5.4844843930483576,
+     "stdev": 0.4567055408723509,
+     "min": 5.194289862597725,
+     "max": 6.010921797697665,
+     "n": 3
+    },
+    "e2e_p50": {
+     "mean": 5.440298013831732,
+     "stdev": 0.23967468374800155,
+     "min": 5.2317125414992915,
+     "max": 5.702112270999351,
+     "n": 3
+    },
+    "e2e_p95": {
+     "mean": 8.788896403981925,
+     "stdev": 0.15460154125368314,
+     "min": 8.613987828951576,
+     "max": 8.907284157899266,
+     "n": 3
+    },
+    "decode_tps_median": {
+     "mean": 35.13906234369008,
+     "stdev": 1.5381465792351434,
+     "min": 34.11097988363419,
+     "max": 36.907368195202196,
+     "n": 3
+    }
+   },
+   "memory": {
+    "peak_rss_mb": 16277,
+    "peak_footprint_mb": 19483
+   },
+   "quality": {
+    "golden": {
+     "cases": 40,
+     "refusal_correctness": 0.975,
+     "citation_validity": 1.0,
+     "out_of_corpus_refused": 7,
+     "out_of_corpus_total": 7,
+     "wrongly_refused": 1,
+     "citation_recall": 0.96875,
+     "fact_coverage": 0.875
+    },
+    "heldout": {
+     "cases": 8,
+     "refusal_correctness": 0.875,
+     "citation_validity": 1.0,
+     "out_of_corpus_refused": 3,
+     "out_of_corpus_total": 4,
+     "wrongly_refused": 0,
+     "citation_recall": 1.0,
+     "fact_coverage": 1.0
+    }
+   },
+   "quality_stable_across_reps": false,
+   "identical_text_share_across_reps": 0.8958333333333334,
+   "same_decision_share_across_reps": 1.0,
+   "yes_no_unstable_across_reps": [],
+   "prefill_share_of_e2e_median": 0.69887279867256,
+   "think_share": 0.0,
+   "truncated_share": 0.0,
+   "mean_prompt_tokens": 1681.5416666666667,
+   "mean_output_tokens": 66.41666666666667,
+   "prompt_tokens_by_case": {
+    "a50-chatbot-disclosure": 1554,
+    "a50-chatbot-exception": 1698,
+    "a50-machine-readable": 1690,
+    "a50-deepfake": 1855,
+    "a50-satire": 1666,
+    "a50-editorial-text": 1917,
+    "a50-timing": 1453,
+    "a50-emotion": 1200,
+    "a50-codes": 1538,
+    "a99-art5-fine": 1433,
+    "a99-transparency-fine": 1718,
+    "a99-false-info": 2090,
+    "a99-sme": 1499,
+    "a99-deployer-fine": 1602,
+    "a99-criteria": 1500,
+    "a113-application": 2216,
+    "a113-prohibitions": 1703,
+    "a113-annex-iii": 1552,
+    "a113-annex-i": 1566,
+    "a4-literacy": 1640,
+    "a4-no-guarantee": 1590,
+    "a5-social-scoring": 1559,
+    "a5-emotion-workplace": 1362,
+    "a5-face-scraping": 2330,
+    "a5-predictive-policing": 2006,
+    "a5-realtime-biometric": 1966,
+    "a6-annex-iii-exception": 1341,
+    "a6-documentation": 1340,
+    "a26-logs": 1408,
+    "a26-workers": 1477,
+    "a26-oversight": 1251,
+    "a26-biometric-48h": 2747,
+    "a26-deployer-chatbot-multihop": 1308,
+    "ooc-gdpr-fine": 1706,
+    "ooc-gpai-flops": 1617,
+    "ooc-data-governance": 1321,
+    "ooc-ai-office": 1203,
+    "ooc-us-law": 1319,
+    "ooc-sandbox": 2081,
+    "ooc-definition-ai-system": 1965,
+    "h-a50-public-deepfake-crime": 2395,
+    "h-a99-midcap": 1206,
+    "h-a113-art102": 2079,
+    "h-a26-cooperate": 1252,
+    "h-ooc-copyright": 1653,
+    "h-ooc-conformity": 2122,
+    "h-ooc-ce-marking": 1879,
+    "h-ooc-market-surveillance": 2141
+   },
+   "decisions_by_case": {
+    "a50-chatbot-disclosure": false,
+    "a50-chatbot-exception": false,
+    "a50-machine-readable": false,
+    "a50-deepfake": false,
+    "a50-satire": false,
+    "a50-editorial-text": false,
+    "a50-timing": false,
+    "a50-emotion": false,
+    "a50-codes": false,
+    "a99-art5-fine": false,
+    "a99-transparency-fine": false,
+    "a99-false-info": false,
+    "a99-sme": false,
+    "a99-deployer-fine": false,
+    "a99-criteria": false,
+    "a113-application": false,
+    "a113-prohibitions": false,
+    "a113-annex-iii": false,
+    "a113-annex-i": false,
+    "a4-literacy": false,
+    "a4-no-guarantee": false,
+    "a5-social-scoring": false,
+    "a5-emotion-workplace": false,
+    "a5-face-scraping": false,
+    "a5-predictive-policing": false,
+    "a5-realtime-biometric": false,
+    "a6-annex-iii-exception": false,
+    "a6-documentation": false,
+    "a26-logs": false,
+    "a26-workers": false,
+    "a26-oversight": true,
+    "a26-biometric-48h": false,
+    "a26-deployer-chatbot-multihop": false,
+    "ooc-gdpr-fine": true,
+    "ooc-gpai-flops": true,
+    "ooc-data-governance": true,
+    "ooc-ai-office": true,
+    "ooc-us-law": true,
+    "ooc-sandbox": true,
+    "ooc-definition-ai-system": true,
+    "h-a50-public-deepfake-crime": false,
+    "h-a99-midcap": false,
+    "h-a113-art102": false,
+    "h-a26-cooperate": false,
+    "h-ooc-copyright": true,
+    "h-ooc-conformity": false,
+    "h-ooc-ce-marking": true,
+    "h-ooc-market-surveillance": true
+   },
+   "polarity_by_case": {
+    "a50-chatbot-disclosure": "ja",
+    "a50-chatbot-exception": null,
+    "a50-machine-readable": null,
+    "a50-deepfake": null,
+    "a50-satire": "nein",
+    "a50-editorial-text": "ja",
+    "a50-timing": null,
+    "a50-emotion": null,
+    "a50-codes": null,
+    "a99-art5-fine": null,
+    "a99-transparency-fine": null,
+    "a99-false-info": null,
+    "a99-sme": null,
+    "a99-deployer-fine": null,
+    "a99-criteria": null,
+    "a113-application": null,
+    "a113-prohibitions": null,
+    "a113-annex-iii": null,
+    "a113-annex-i": null,
+    "a4-literacy": null,
+    "a4-no-guarantee": "nein",
+    "a5-social-scoring": "ja",
+    "a5-emotion-workplace": "nein",
+    "a5-face-scraping": "nein",
+    "a5-predictive-policing": "nein",
+    "a5-realtime-biometric": null,
+    "a6-annex-iii-exception": null,
+    "a6-documentation": null,
+    "a26-logs": null,
+    "a26-workers": null,
+    "a26-oversight": null,
+    "a26-biometric-48h": null,
+    "a26-deployer-chatbot-multihop": null,
+    "ooc-gdpr-fine": null,
+    "ooc-gpai-flops": null,
+    "ooc-data-governance": null,
+    "ooc-ai-office": null,
+    "ooc-us-law": null,
+    "ooc-sandbox": null,
+    "ooc-definition-ai-system": null,
+    "h-a50-public-deepfake-crime": "ja",
+    "h-a99-midcap": null,
+    "h-a113-art102": null,
+    "h-a26-cooperate": "ja",
+    "h-ooc-copyright": null,
+    "h-ooc-conformity": null,
+    "h-ooc-ce-marking": null,
+    "h-ooc-market-surveillance": null
+   },
+   "sweep": {
+    "1": {
+     "tok_per_s": {
+      "mean": 13.271637464264339,
+      "stdev": 0.3191420761426428,
+      "min": 12.919570010184787,
+      "max": 13.541947623131444,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.1799544062951097,
+      "stdev": 0.004327350184984985,
+      "min": 0.17518061030759033,
+      "max": 0.18361962878822297,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 6.98533151749992,
+      "stdev": 0.4962138449770073,
+      "min": 6.64534683324564,
+      "max": 7.554743427001085,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 4.685959958416788,
+      "stdev": 0.3982906174020957,
+      "min": 4.3760431869995955,
+      "max": 5.135195614750046,
+      "n": 3
+     },
+     "mean_output_tokens": 73.75,
+     "mean_prompt_tokens": 1666.3125
+    },
+    "2": {
+     "tok_per_s": {
+      "mean": 15.679326837389532,
+      "stdev": 0.4681513159849758,
+      "min": 15.139061064357376,
+      "max": 15.96528140289173,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.21260104186290893,
+      "stdev": 0.006347814454033568,
+      "min": 0.2052754042624729,
+      "max": 0.21647839190361667,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 13.101541465250193,
+      "stdev": 0.5332383676620541,
+      "min": 12.523086145747584,
+      "max": 13.573485405751853,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 5.796518114666469,
+      "stdev": 0.9164031290113273,
+      "min": 4.989741177001633,
+      "max": 6.792888812997262,
+      "n": 3
+     },
+     "mean_output_tokens": 73.75,
+     "mean_prompt_tokens": 1666.3125
+    },
+    "4": {
+     "tok_per_s": {
+      "mean": 14.914323911783072,
+      "stdev": 0.6954564874462191,
+      "min": 14.124010236026432,
+      "max": 15.43282152298901,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.20217406720996337,
+      "stdev": 0.009522072406218149,
+      "min": 0.1913498423170389,
+      "max": 0.2092585969218849,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 27.740538725667648,
+      "stdev": 0.9350265705233108,
+      "min": 26.69521551024991,
+      "max": 28.49718584375296,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 11.813088354083447,
+      "stdev": 0.704117937622738,
+      "min": 11.234838323001895,
+      "max": 12.597190385502472,
+      "n": 3
+     },
+     "mean_output_tokens": 73.77083333333333,
+     "mean_prompt_tokens": 1666.3125
+    },
+    "8": {
+     "tok_per_s": {
+      "mean": 14.033053752039626,
+      "stdev": 0.3561623479922295,
+      "min": 13.660846031362357,
+      "max": 14.370642521291698,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.1902264138786723,
+      "stdev": 0.004911425534700643,
+      "min": 0.18507496740203022,
+      "max": 0.19485616978022643,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 66.66128017374952,
+      "stdev": 1.2953646592119643,
+      "min": 65.64513567749964,
+      "max": 68.11990877075186,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 27.568457059083812,
+      "stdev": 1.0913428539217422,
+      "min": 26.454576083751817,
+      "max": 28.635771041752378,
+      "n": 3
+     },
+     "mean_output_tokens": 73.77083333333333,
+     "mean_prompt_tokens": 1666.3125
+    }
+   }
+  },
+  "llamacpp-q4": {
+   "config": {
+    "name": "llamacpp-q4",
+    "runtime": "llamacpp",
+    "quant": "Q4_K_M",
+    "model": "qwen3:8b",
+    "port": 11501
+   },
+   "cold": {
+    "launch_to_first_token_s": {
+     "mean": 5.309154666334507,
+     "stdev": 0.40868063482803707,
+     "min": 5.050247999999556,
+     "max": 5.780288207999547,
+     "n": 3
+    },
+    "ready_s": {
+     "mean": 1.6151877220011859,
+     "stdev": 0.241766263333899,
+     "min": 1.4688757080002688,
+     "max": 1.8942454580028425,
+     "n": 3
+    },
+    "peak_rss_mb": 14407,
+    "peak_footprint_mb": 9442
+   },
+   "warm": {
+    "ttft_p50": {
+     "mean": 3.1659771664999425,
+     "stdev": 0.09002673009876264,
+     "min": 3.1030693124994286,
+     "max": 3.269102311998722,
+     "n": 3
+    },
+    "ttft_p95": {
+     "mean": 4.957387165416487,
+     "stdev": 0.13490353353267695,
+     "min": 4.816404706349568,
+     "max": 5.085253677399669,
+     "n": 3
+    },
+    "e2e_p50": {
+     "mean": 4.887811854499887,
+     "stdev": 0.31029423435906217,
+     "min": 4.586050583999167,
+     "max": 5.205987479501346,
+     "n": 3
+    },
+    "e2e_p95": {
+     "mean": 8.40219202635041,
+     "stdev": 0.102140163504939,
+     "min": 8.287705351849581,
+     "max": 8.483975412951258,
+     "n": 3
+    },
+    "decode_tps_median": {
+     "mean": 38.19612863072154,
+     "stdev": 2.6830754615460144,
+     "min": 36.196777008530766,
+     "max": 41.24539921895769,
+     "n": 3
+    }
+   },
+   "memory": {
+    "peak_rss_mb": 14410,
+    "peak_footprint_mb": 9499
+   },
+   "quality": {
+    "golden": {
+     "cases": 40,
+     "refusal_correctness": 0.975,
+     "citation_validity": 1.0,
+     "out_of_corpus_refused": 7,
+     "out_of_corpus_total": 7,
+     "wrongly_refused": 1,
+     "citation_recall": 0.96875,
+     "fact_coverage": 0.90625
+    },
+    "heldout": {
+     "cases": 8,
+     "refusal_correctness": 0.875,
+     "citation_validity": 1.0,
+     "out_of_corpus_refused": 3,
+     "out_of_corpus_total": 4,
+     "wrongly_refused": 0,
+     "citation_recall": 1.0,
+     "fact_coverage": 1.0
+    }
+   },
+   "quality_stable_across_reps": true,
+   "identical_text_share_across_reps": 0.8541666666666666,
+   "same_decision_share_across_reps": 1.0,
+   "yes_no_unstable_across_reps": [
+    "a5-predictive-policing"
+   ],
+   "prefill_share_of_e2e_median": 0.6985469588196906,
+   "think_share": 0.0,
+   "truncated_share": 0.0,
+   "mean_prompt_tokens": 1677.5416666666667,
+   "mean_output_tokens": 66.39583333333333,
+   "prompt_tokens_by_case": {
+    "a50-chatbot-disclosure": 1550,
+    "a50-chatbot-exception": 1694,
+    "a50-machine-readable": 1686,
+    "a50-deepfake": 1851,
+    "a50-satire": 1662,
+    "a50-editorial-text": 1913,
+    "a50-timing": 1449,
+    "a50-emotion": 1196,
+    "a50-codes": 1534,
+    "a99-art5-fine": 1429,
+    "a99-transparency-fine": 1714,
+    "a99-false-info": 2086,
+    "a99-sme": 1495,
+    "a99-deployer-fine": 1598,
+    "a99-criteria": 1496,
+    "a113-application": 2212,
+    "a113-prohibitions": 1699,
+    "a113-annex-iii": 1548,
+    "a113-annex-i": 1562,
+    "a4-literacy": 1636,
+    "a4-no-guarantee": 1586,
+    "a5-social-scoring": 1555,
+    "a5-emotion-workplace": 1358,
+    "a5-face-scraping": 2326,
+    "a5-predictive-policing": 2002,
+    "a5-realtime-biometric": 1962,
+    "a6-annex-iii-exception": 1337,
+    "a6-documentation": 1336,
+    "a26-logs": 1404,
+    "a26-workers": 1473,
+    "a26-oversight": 1247,
+    "a26-biometric-48h": 2743,
+    "a26-deployer-chatbot-multihop": 1304,
+    "ooc-gdpr-fine": 1702,
+    "ooc-gpai-flops": 1613,
+    "ooc-data-governance": 1317,
+    "ooc-ai-office": 1199,
+    "ooc-us-law": 1315,
+    "ooc-sandbox": 2077,
+    "ooc-definition-ai-system": 1961,
+    "h-a50-public-deepfake-crime": 2391,
+    "h-a99-midcap": 1202,
+    "h-a113-art102": 2075,
+    "h-a26-cooperate": 1248,
+    "h-ooc-copyright": 1649,
+    "h-ooc-conformity": 2118,
+    "h-ooc-ce-marking": 1875,
+    "h-ooc-market-surveillance": 2137
+   },
+   "decisions_by_case": {
+    "a50-chatbot-disclosure": false,
+    "a50-chatbot-exception": false,
+    "a50-machine-readable": false,
+    "a50-deepfake": false,
+    "a50-satire": false,
+    "a50-editorial-text": false,
+    "a50-timing": false,
+    "a50-emotion": false,
+    "a50-codes": false,
+    "a99-art5-fine": false,
+    "a99-transparency-fine": false,
+    "a99-false-info": false,
+    "a99-sme": false,
+    "a99-deployer-fine": false,
+    "a99-criteria": false,
+    "a113-application": false,
+    "a113-prohibitions": false,
+    "a113-annex-iii": false,
+    "a113-annex-i": false,
+    "a4-literacy": false,
+    "a4-no-guarantee": false,
+    "a5-social-scoring": false,
+    "a5-emotion-workplace": false,
+    "a5-face-scraping": false,
+    "a5-predictive-policing": false,
+    "a5-realtime-biometric": false,
+    "a6-annex-iii-exception": false,
+    "a6-documentation": false,
+    "a26-logs": false,
+    "a26-workers": false,
+    "a26-oversight": true,
+    "a26-biometric-48h": false,
+    "a26-deployer-chatbot-multihop": false,
+    "ooc-gdpr-fine": true,
+    "ooc-gpai-flops": true,
+    "ooc-data-governance": true,
+    "ooc-ai-office": true,
+    "ooc-us-law": true,
+    "ooc-sandbox": true,
+    "ooc-definition-ai-system": true,
+    "h-a50-public-deepfake-crime": false,
+    "h-a99-midcap": false,
+    "h-a113-art102": false,
+    "h-a26-cooperate": false,
+    "h-ooc-copyright": true,
+    "h-ooc-conformity": false,
+    "h-ooc-ce-marking": true,
+    "h-ooc-market-surveillance": true
+   },
+   "polarity_by_case": {
+    "a50-chatbot-disclosure": "ja",
+    "a50-chatbot-exception": null,
+    "a50-machine-readable": null,
+    "a50-deepfake": null,
+    "a50-satire": "nein",
+    "a50-editorial-text": "ja",
+    "a50-timing": null,
+    "a50-emotion": null,
+    "a50-codes": null,
+    "a99-art5-fine": null,
+    "a99-transparency-fine": null,
+    "a99-false-info": null,
+    "a99-sme": null,
+    "a99-deployer-fine": null,
+    "a99-criteria": null,
+    "a113-application": null,
+    "a113-prohibitions": null,
+    "a113-annex-iii": null,
+    "a113-annex-i": null,
+    "a4-literacy": null,
+    "a4-no-guarantee": "nein",
+    "a5-social-scoring": "ja",
+    "a5-emotion-workplace": "nein",
+    "a5-face-scraping": "nein",
+    "a5-predictive-policing": "ja",
+    "a5-realtime-biometric": null,
+    "a6-annex-iii-exception": null,
+    "a6-documentation": null,
+    "a26-logs": null,
+    "a26-workers": null,
+    "a26-oversight": null,
+    "a26-biometric-48h": null,
+    "a26-deployer-chatbot-multihop": null,
+    "ooc-gdpr-fine": null,
+    "ooc-gpai-flops": null,
+    "ooc-data-governance": null,
+    "ooc-ai-office": null,
+    "ooc-us-law": null,
+    "ooc-sandbox": null,
+    "ooc-definition-ai-system": null,
+    "h-a50-public-deepfake-crime": "ja",
+    "h-a99-midcap": null,
+    "h-a113-art102": null,
+    "h-a26-cooperate": "ja",
+    "h-ooc-copyright": null,
+    "h-ooc-conformity": null,
+    "h-ooc-ce-marking": null,
+    "h-ooc-market-surveillance": null
+   },
+   "sweep": {
+    "1": {
+     "tok_per_s": {
+      "mean": 15.171695111482146,
+      "stdev": 0.4415393277800258,
+      "min": 14.74853876285674,
+      "max": 15.629567837987842,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.20296582088939327,
+      "stdev": 0.005906880639197663,
+      "min": 0.19730486639273231,
+      "max": 0.20909120853495441,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 6.106210968999221,
+      "stdev": 0.256631386082704,
+      "min": 5.934164687248995,
+      "max": 6.401183208998191,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 4.210692784833252,
+      "stdev": 0.0892945001762952,
+      "min": 4.135301302247171,
+      "max": 4.309303229005309,
+      "n": 3
+     },
+     "mean_output_tokens": 74.75,
+     "mean_prompt_tokens": 1662.3125
+    },
+    "2": {
+     "tok_per_s": {
+      "mean": 16.810295718463525,
+      "stdev": 0.3019941219916724,
+      "min": 16.613418914820862,
+      "max": 17.157993208099338,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.2214062695207052,
+      "stdev": 0.002023918523780863,
+      "min": 0.2190964815080522,
+      "max": 0.22286923120361704,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 12.091793538334363,
+      "stdev": 0.07020996216926866,
+      "min": 12.044705624752169,
+      "max": 12.172490667247985,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 5.2492555068317115,
+      "stdev": 0.03597077324479184,
+      "min": 5.208041197998682,
+      "max": 5.274327197997991,
+      "n": 3
+     },
+     "mean_output_tokens": 75.9375,
+     "mean_prompt_tokens": 1662.3125
+    },
+    "4": {
+     "tok_per_s": {
+      "mean": 18.231269881574928,
+      "stdev": 0.4950360612884383,
+      "min": 17.66629084500921,
+      "max": 18.58899049819435,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.24375864457105548,
+      "stdev": 0.006504377162603684,
+      "min": 0.23633833906366838,
+      "max": 0.24847439262415172,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 24.584937969081995,
+      "stdev": 1.1011222195203691,
+      "min": 23.656308010999055,
+      "max": 25.801386541998,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 12.842030455083053,
+      "stdev": 1.9324906109130102,
+      "min": 10.855300770748727,
+      "max": 14.715280989999883,
+      "n": 3
+     },
+     "mean_output_tokens": 74.79166666666667,
+     "mean_prompt_tokens": 1662.3125
+    },
+    "8": {
+     "tok_per_s": {
+      "mean": 19.760577653417155,
+      "stdev": 0.11092963809717037,
+      "min": 19.679003598287775,
+      "max": 19.886890348215026,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.26027567506084576,
+      "stdev": 0.007334723534948574,
+      "min": 0.2519596040095676,
+      "max": 0.26582309571548907,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 50.51523359358422,
+      "stdev": 1.9290051684484029,
+      "min": 49.27003757275088,
+      "max": 52.737261531248805,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 23.43238992366666,
+      "stdev": 1.531048064141423,
+      "min": 22.434921228998064,
+      "max": 25.19520509400172,
+      "n": 3
+     },
+     "mean_output_tokens": 75.95833333333333,
+     "mean_prompt_tokens": 1662.3125
+    }
+   }
+  },
+  "mlx-4bit": {
+   "config": {
+    "name": "mlx-4bit",
+    "runtime": "mlx",
+    "quant": "MLX 4-bit",
+    "model": "mlx-community/Qwen3-8B-4bit",
+    "port": 11502
+   },
+   "cold": {
+    "launch_to_first_token_s": {
+     "mean": 6.57267270800124,
+     "stdev": 1.0136180614519676,
+     "min": 5.8656922500013025,
+     "max": 7.733972041001834,
+     "n": 3
+    },
+    "ready_s": {
+     "mean": 1.4295483473324566,
+     "stdev": 0.0814420252704868,
+     "min": 1.335507374998997,
+     "max": 1.4767273329998716,
+     "n": 3
+    },
+    "peak_rss_mb": 4716,
+    "peak_footprint_mb": 5886
+   },
+   "warm": {
+    "ttft_p50": {
+     "mean": 2.926188680500976,
+     "stdev": 0.07520705754277317,
+     "min": 2.84748164550183,
+     "max": 2.997322750001331,
+     "n": 3
+    },
+    "ttft_p95": {
+     "mean": 4.561851734500547,
+     "stdev": 0.08230247887107749,
+     "min": 4.486485995601106,
+     "max": 4.6496714375003645,
+     "n": 3
+    },
+    "e2e_p50": {
+     "mean": 4.578956486,
+     "stdev": 0.08399379415121247,
+     "min": 4.4831813124983455,
+     "max": 4.640083958001924,
+     "n": 3
+    },
+    "e2e_p95": {
+     "mean": 6.897696915251314,
+     "stdev": 0.04627146069608908,
+     "min": 6.862445791450227,
+     "max": 6.950094114703461,
+     "n": 3
+    },
+    "decode_tps_median": {
+     "mean": 44.4582509786571,
+     "stdev": 1.1103166161559896,
+     "min": 43.25997646084606,
+     "max": 45.45223836493455,
+     "n": 3
+    }
+   },
+   "memory": {
+    "peak_rss_mb": 4659,
+    "peak_footprint_mb": 30720
+   },
+   "quality": {
+    "golden": {
+     "cases": 40,
+     "refusal_correctness": 0.975,
+     "citation_validity": 1.0,
+     "out_of_corpus_refused": 7,
+     "out_of_corpus_total": 7,
+     "wrongly_refused": 1,
+     "citation_recall": 0.96875,
+     "fact_coverage": 0.9375
+    },
+    "heldout": {
+     "cases": 8,
+     "refusal_correctness": 0.875,
+     "citation_validity": 1.0,
+     "out_of_corpus_refused": 3,
+     "out_of_corpus_total": 4,
+     "wrongly_refused": 0,
+     "citation_recall": 1.0,
+     "fact_coverage": 0.75
+    }
+   },
+   "quality_stable_across_reps": false,
+   "identical_text_share_across_reps": 0.875,
+   "same_decision_share_across_reps": 1.0,
+   "yes_no_unstable_across_reps": [],
+   "prefill_share_of_e2e_median": 0.7115063485717548,
+   "think_share": 0.0,
+   "truncated_share": 0.0,
+   "mean_prompt_tokens": 1677.5416666666667,
+   "mean_output_tokens": 64.22916666666667,
+   "prompt_tokens_by_case": {
+    "a50-chatbot-disclosure": 1550,
+    "a50-chatbot-exception": 1694,
+    "a50-machine-readable": 1686,
+    "a50-deepfake": 1851,
+    "a50-satire": 1662,
+    "a50-editorial-text": 1913,
+    "a50-timing": 1449,
+    "a50-emotion": 1196,
+    "a50-codes": 1534,
+    "a99-art5-fine": 1429,
+    "a99-transparency-fine": 1714,
+    "a99-false-info": 2086,
+    "a99-sme": 1495,
+    "a99-deployer-fine": 1598,
+    "a99-criteria": 1496,
+    "a113-application": 2212,
+    "a113-prohibitions": 1699,
+    "a113-annex-iii": 1548,
+    "a113-annex-i": 1562,
+    "a4-literacy": 1636,
+    "a4-no-guarantee": 1586,
+    "a5-social-scoring": 1555,
+    "a5-emotion-workplace": 1358,
+    "a5-face-scraping": 2326,
+    "a5-predictive-policing": 2002,
+    "a5-realtime-biometric": 1962,
+    "a6-annex-iii-exception": 1337,
+    "a6-documentation": 1336,
+    "a26-logs": 1404,
+    "a26-workers": 1473,
+    "a26-oversight": 1247,
+    "a26-biometric-48h": 2743,
+    "a26-deployer-chatbot-multihop": 1304,
+    "ooc-gdpr-fine": 1702,
+    "ooc-gpai-flops": 1613,
+    "ooc-data-governance": 1317,
+    "ooc-ai-office": 1199,
+    "ooc-us-law": 1315,
+    "ooc-sandbox": 2077,
+    "ooc-definition-ai-system": 1961,
+    "h-a50-public-deepfake-crime": 2391,
+    "h-a99-midcap": 1202,
+    "h-a113-art102": 2075,
+    "h-a26-cooperate": 1248,
+    "h-ooc-copyright": 1649,
+    "h-ooc-conformity": 2118,
+    "h-ooc-ce-marking": 1875,
+    "h-ooc-market-surveillance": 2137
+   },
+   "decisions_by_case": {
+    "a50-chatbot-disclosure": false,
+    "a50-chatbot-exception": false,
+    "a50-machine-readable": false,
+    "a50-deepfake": false,
+    "a50-satire": false,
+    "a50-editorial-text": false,
+    "a50-timing": false,
+    "a50-emotion": false,
+    "a50-codes": false,
+    "a99-art5-fine": false,
+    "a99-transparency-fine": false,
+    "a99-false-info": false,
+    "a99-sme": false,
+    "a99-deployer-fine": false,
+    "a99-criteria": false,
+    "a113-application": false,
+    "a113-prohibitions": false,
+    "a113-annex-iii": false,
+    "a113-annex-i": false,
+    "a4-literacy": false,
+    "a4-no-guarantee": false,
+    "a5-social-scoring": false,
+    "a5-emotion-workplace": false,
+    "a5-face-scraping": false,
+    "a5-predictive-policing": false,
+    "a5-realtime-biometric": false,
+    "a6-annex-iii-exception": false,
+    "a6-documentation": false,
+    "a26-logs": false,
+    "a26-workers": false,
+    "a26-oversight": true,
+    "a26-biometric-48h": false,
+    "a26-deployer-chatbot-multihop": false,
+    "ooc-gdpr-fine": true,
+    "ooc-gpai-flops": true,
+    "ooc-data-governance": true,
+    "ooc-ai-office": true,
+    "ooc-us-law": true,
+    "ooc-sandbox": true,
+    "ooc-definition-ai-system": true,
+    "h-a50-public-deepfake-crime": false,
+    "h-a99-midcap": false,
+    "h-a113-art102": false,
+    "h-a26-cooperate": false,
+    "h-ooc-copyright": true,
+    "h-ooc-conformity": false,
+    "h-ooc-ce-marking": true,
+    "h-ooc-market-surveillance": true
+   },
+   "polarity_by_case": {
+    "a50-chatbot-disclosure": "ja",
+    "a50-chatbot-exception": null,
+    "a50-machine-readable": null,
+    "a50-deepfake": null,
+    "a50-satire": "nein",
+    "a50-editorial-text": "ja",
+    "a50-timing": null,
+    "a50-emotion": null,
+    "a50-codes": null,
+    "a99-art5-fine": null,
+    "a99-transparency-fine": null,
+    "a99-false-info": null,
+    "a99-sme": null,
+    "a99-deployer-fine": null,
+    "a99-criteria": null,
+    "a113-application": null,
+    "a113-prohibitions": null,
+    "a113-annex-iii": null,
+    "a113-annex-i": null,
+    "a4-literacy": null,
+    "a4-no-guarantee": "nein",
+    "a5-social-scoring": "ja",
+    "a5-emotion-workplace": "nein",
+    "a5-face-scraping": "nein",
+    "a5-predictive-policing": "nein",
+    "a5-realtime-biometric": null,
+    "a6-annex-iii-exception": null,
+    "a6-documentation": null,
+    "a26-logs": null,
+    "a26-workers": null,
+    "a26-oversight": null,
+    "a26-biometric-48h": null,
+    "a26-deployer-chatbot-multihop": null,
+    "ooc-gdpr-fine": null,
+    "ooc-gpai-flops": null,
+    "ooc-data-governance": null,
+    "ooc-ai-office": null,
+    "ooc-us-law": null,
+    "ooc-sandbox": null,
+    "ooc-definition-ai-system": null,
+    "h-a50-public-deepfake-crime": "ja",
+    "h-a99-midcap": null,
+    "h-a113-art102": null,
+    "h-a26-cooperate": "ja",
+    "h-ooc-copyright": null,
+    "h-ooc-conformity": null,
+    "h-ooc-ce-marking": null,
+    "h-ooc-market-surveillance": null
+   },
+   "sweep": {
+    "1": {
+     "tok_per_s": {
+      "mean": 17.356918037976786,
+      "stdev": 0.8303986053091068,
+      "min": 16.683830779844072,
+      "max": 18.284881146688384,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.18066500707950892,
+      "stdev": 0.007104598799063223,
+      "min": 0.1754055608963887,
+      "max": 0.18874716022388008,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 7.386299857666624,
+      "stdev": 0.16166047876313408,
+      "min": 7.246040583249851,
+      "max": 7.563104760747592,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 4.427680444582317,
+      "stdev": 0.15505499542614193,
+      "min": 4.248658374748629,
+      "max": 4.519509990001097,
+      "n": 3
+     },
+     "mean_output_tokens": 96.0625,
+     "mean_prompt_tokens": 1662.3125
+    },
+    "2": {
+     "tok_per_s": {
+      "mean": 19.627331380815253,
+      "stdev": 0.1561033250845742,
+      "min": 19.504680637336733,
+      "max": 19.803050128436094,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.20856121014830378,
+      "stdev": 0.003442955186388851,
+      "min": 0.20558293161883248,
+      "max": 0.2123309925605199,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 13.985607708246485,
+      "stdev": 0.04529081876837597,
+      "min": 13.933382270746733,
+      "max": 14.01409445799436,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 7.881519607749094,
+      "stdev": 0.7242489554033942,
+      "min": 7.456979552249322,
+      "max": 8.71777750025285,
+      "n": 3
+     },
+     "mean_output_tokens": 94.125,
+     "mean_prompt_tokens": 1662.3125
+    },
+    "4": {
+     "tok_per_s": {
+      "mean": 21.093985773968402,
+      "stdev": 0.8047295285247211,
+      "min": 20.419431917041706,
+      "max": 21.98472673437837,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.22990880136819528,
+      "stdev": 0.010557247620781592,
+      "min": 0.22149892248994393,
+      "max": 0.2417564451890405,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 26.60059826016671,
+      "stdev": 2.714147495659969,
+      "min": 24.13212593724711,
+      "max": 29.507132218501283,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 14.32997321166719,
+      "stdev": 0.9592969779792805,
+      "min": 13.223474843502117,
+      "max": 14.927906989249095,
+      "n": 3
+     },
+     "mean_output_tokens": 91.77083333333333,
+     "mean_prompt_tokens": 1662.3125
+    },
+    "8": {
+     "tok_per_s": {
+      "mean": 21.880652827089406,
+      "stdev": 0.5559738269087828,
+      "min": 21.323895703281135,
+      "max": 22.43584003232708,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.23277241004977026,
+      "stdev": 0.0017162643971580045,
+      "min": 0.23131005508643943,
+      "max": 0.2346619061196783,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 59.98286882658309,
+      "stdev": 1.171297331275811,
+      "min": 58.921415323000474,
+      "max": 61.23949142700076,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 28.012602746749206,
+      "stdev": 0.506049009494488,
+      "min": 27.428524333248788,
+      "max": 28.319638792248952,
+      "n": 3
+     },
+     "mean_output_tokens": 94.0,
+     "mean_prompt_tokens": 1662.3125
+    }
+   }
+  },
+  "ollama-q8": {
+   "config": {
+    "name": "ollama-q8",
+    "runtime": "ollama",
+    "quant": "Q8_0",
+    "model": "qwen3:8b-q8_0",
+    "port": 11500
+   },
+   "cold": {
+    "launch_to_first_token_s": {
+     "mean": 5.1161613886676305,
+     "stdev": 0.20913572714438308,
+     "min": 4.9904827080026735,
+     "max": 5.357582374999765,
+     "n": 3
+    },
+    "ready_s": {
+     "mean": 0.23234590266899127,
+     "stdev": 0.026722125175894784,
+     "min": 0.21508449999964796,
+     "max": 0.2631262080030865,
+     "n": 3
+    },
+    "peak_rss_mb": 17889,
+    "peak_footprint_mb": 9465
+   },
+   "warm": {
+    "ttft_p50": {
+     "mean": 3.147847048498079,
+     "stdev": 0.3903240110915309,
+     "min": 2.851983291497163,
+     "max": 3.590229791498132,
+     "n": 3
+    },
+    "ttft_p95": {
+     "mean": 4.896380129201012,
+     "stdev": 0.6527994343575053,
+     "min": 4.457800194299488,
+     "max": 5.646596487052374,
+     "n": 3
+    },
+    "e2e_p50": {
+     "mean": 5.442372013831725,
+     "stdev": 0.3512921178575052,
+     "min": 5.1437549164984375,
+     "max": 5.829434687497269,
+     "n": 3
+    },
+    "e2e_p95": {
+     "mean": 11.172983321650099,
+     "stdev": 0.76097720045769,
+     "min": 10.594606104401826,
+     "max": 12.035055989698593,
+     "n": 3
+    },
+    "decode_tps_median": {
+     "mean": 26.375165814850234,
+     "stdev": 1.422586588098052,
+     "min": 24.85160263965344,
+     "max": 27.668754735065107,
+     "n": 3
+    }
+   },
+   "memory": {
+    "peak_rss_mb": 23498,
+    "peak_footprint_mb": 19481
+   },
+   "quality": {
+    "golden": {
+     "cases": 40,
+     "refusal_correctness": 0.975,
+     "citation_validity": 1.0,
+     "out_of_corpus_refused": 7,
+     "out_of_corpus_total": 7,
+     "wrongly_refused": 1,
+     "citation_recall": 0.96875,
+     "fact_coverage": 0.90625
+    },
+    "heldout": {
+     "cases": 8,
+     "refusal_correctness": 0.875,
+     "citation_validity": 1.0,
+     "out_of_corpus_refused": 3,
+     "out_of_corpus_total": 4,
+     "wrongly_refused": 0,
+     "citation_recall": 1.0,
+     "fact_coverage": 1.0
+    }
+   },
+   "quality_stable_across_reps": true,
+   "identical_text_share_across_reps": 0.8958333333333334,
+   "same_decision_share_across_reps": 1.0,
+   "yes_no_unstable_across_reps": [],
+   "prefill_share_of_e2e_median": 0.6209159938824029,
+   "think_share": 0.0,
+   "truncated_share": 0.0,
+   "mean_prompt_tokens": 1681.5416666666667,
+   "mean_output_tokens": 68.58333333333333,
+   "prompt_tokens_by_case": {
+    "a50-chatbot-disclosure": 1554,
+    "a50-chatbot-exception": 1698,
+    "a50-machine-readable": 1690,
+    "a50-deepfake": 1855,
+    "a50-satire": 1666,
+    "a50-editorial-text": 1917,
+    "a50-timing": 1453,
+    "a50-emotion": 1200,
+    "a50-codes": 1538,
+    "a99-art5-fine": 1433,
+    "a99-transparency-fine": 1718,
+    "a99-false-info": 2090,
+    "a99-sme": 1499,
+    "a99-deployer-fine": 1602,
+    "a99-criteria": 1500,
+    "a113-application": 2216,
+    "a113-prohibitions": 1703,
+    "a113-annex-iii": 1552,
+    "a113-annex-i": 1566,
+    "a4-literacy": 1640,
+    "a4-no-guarantee": 1590,
+    "a5-social-scoring": 1559,
+    "a5-emotion-workplace": 1362,
+    "a5-face-scraping": 2330,
+    "a5-predictive-policing": 2006,
+    "a5-realtime-biometric": 1966,
+    "a6-annex-iii-exception": 1341,
+    "a6-documentation": 1340,
+    "a26-logs": 1408,
+    "a26-workers": 1477,
+    "a26-oversight": 1251,
+    "a26-biometric-48h": 2747,
+    "a26-deployer-chatbot-multihop": 1308,
+    "ooc-gdpr-fine": 1706,
+    "ooc-gpai-flops": 1617,
+    "ooc-data-governance": 1321,
+    "ooc-ai-office": 1203,
+    "ooc-us-law": 1319,
+    "ooc-sandbox": 2081,
+    "ooc-definition-ai-system": 1965,
+    "h-a50-public-deepfake-crime": 2395,
+    "h-a99-midcap": 1206,
+    "h-a113-art102": 2079,
+    "h-a26-cooperate": 1252,
+    "h-ooc-copyright": 1653,
+    "h-ooc-conformity": 2122,
+    "h-ooc-ce-marking": 1879,
+    "h-ooc-market-surveillance": 2141
+   },
+   "decisions_by_case": {
+    "a50-chatbot-disclosure": false,
+    "a50-chatbot-exception": false,
+    "a50-machine-readable": false,
+    "a50-deepfake": false,
+    "a50-satire": false,
+    "a50-editorial-text": false,
+    "a50-timing": false,
+    "a50-emotion": false,
+    "a50-codes": false,
+    "a99-art5-fine": false,
+    "a99-transparency-fine": false,
+    "a99-false-info": false,
+    "a99-sme": false,
+    "a99-deployer-fine": false,
+    "a99-criteria": false,
+    "a113-application": false,
+    "a113-prohibitions": false,
+    "a113-annex-iii": false,
+    "a113-annex-i": false,
+    "a4-literacy": false,
+    "a4-no-guarantee": false,
+    "a5-social-scoring": false,
+    "a5-emotion-workplace": false,
+    "a5-face-scraping": false,
+    "a5-predictive-policing": false,
+    "a5-realtime-biometric": false,
+    "a6-annex-iii-exception": false,
+    "a6-documentation": false,
+    "a26-logs": false,
+    "a26-workers": false,
+    "a26-oversight": true,
+    "a26-biometric-48h": false,
+    "a26-deployer-chatbot-multihop": false,
+    "ooc-gdpr-fine": true,
+    "ooc-gpai-flops": true,
+    "ooc-data-governance": true,
+    "ooc-ai-office": true,
+    "ooc-us-law": true,
+    "ooc-sandbox": true,
+    "ooc-definition-ai-system": true,
+    "h-a50-public-deepfake-crime": false,
+    "h-a99-midcap": false,
+    "h-a113-art102": false,
+    "h-a26-cooperate": false,
+    "h-ooc-copyright": true,
+    "h-ooc-conformity": false,
+    "h-ooc-ce-marking": true,
+    "h-ooc-market-surveillance": true
+   },
+   "polarity_by_case": {
+    "a50-chatbot-disclosure": "ja",
+    "a50-chatbot-exception": null,
+    "a50-machine-readable": null,
+    "a50-deepfake": null,
+    "a50-satire": "nein",
+    "a50-editorial-text": "ja",
+    "a50-timing": null,
+    "a50-emotion": null,
+    "a50-codes": null,
+    "a99-art5-fine": null,
+    "a99-transparency-fine": null,
+    "a99-false-info": null,
+    "a99-sme": null,
+    "a99-deployer-fine": null,
+    "a99-criteria": null,
+    "a113-application": null,
+    "a113-prohibitions": null,
+    "a113-annex-iii": null,
+    "a113-annex-i": null,
+    "a4-literacy": null,
+    "a4-no-guarantee": "nein",
+    "a5-social-scoring": "ja",
+    "a5-emotion-workplace": "nein",
+    "a5-face-scraping": "nein",
+    "a5-predictive-policing": "ja",
+    "a5-realtime-biometric": null,
+    "a6-annex-iii-exception": null,
+    "a6-documentation": null,
+    "a26-logs": null,
+    "a26-workers": null,
+    "a26-oversight": null,
+    "a26-biometric-48h": null,
+    "a26-deployer-chatbot-multihop": null,
+    "ooc-gdpr-fine": null,
+    "ooc-gpai-flops": null,
+    "ooc-data-governance": null,
+    "ooc-ai-office": null,
+    "ooc-us-law": null,
+    "ooc-sandbox": null,
+    "ooc-definition-ai-system": null,
+    "h-a50-public-deepfake-crime": "ja",
+    "h-a99-midcap": null,
+    "h-a113-art102": null,
+    "h-a26-cooperate": "ja",
+    "h-ooc-copyright": null,
+    "h-ooc-conformity": null,
+    "h-ooc-ce-marking": null,
+    "h-ooc-market-surveillance": null
+   },
+   "sweep": {
+    "1": {
+     "tok_per_s": {
+      "mean": 12.630057383631176,
+      "stdev": 0.7711707315664097,
+      "min": 11.97268479409875,
+      "max": 13.478936196724254,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.14559143958076282,
+      "stdev": 0.008889576156385134,
+      "min": 0.13801365756886166,
+      "max": 0.1553767861293862,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 10.505812757333842,
+      "stdev": 0.5557732418517795,
+      "min": 9.864854115250637,
+      "max": 10.853912916751142,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 4.541823927082684,
+      "stdev": 0.40217510464444145,
+      "min": 4.157637958498526,
+      "max": 4.959849801749442,
+      "n": 3
+     },
+     "mean_output_tokens": 86.75,
+     "mean_prompt_tokens": 1666.3125
+    },
+    "2": {
+     "tok_per_s": {
+      "mean": 16.619670112098923,
+      "stdev": 0.8245130424247381,
+      "min": 16.050854905891946,
+      "max": 17.565257496365813,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.19327603344194455,
+      "stdev": 0.01242472010027395,
+      "min": 0.1850242640448639,
+      "max": 0.20756581975026073,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 17.742731777835917,
+      "stdev": 1.9229861267143302,
+      "min": 15.532775020999907,
+      "max": 19.03464328125301,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 6.168420548250045,
+      "stdev": 0.9830442245500731,
+      "min": 5.119899187249757,
+      "max": 7.069282030748582,
+      "n": 3
+     },
+     "mean_output_tokens": 86.04166666666667,
+     "mean_prompt_tokens": 1666.3125
+    },
+    "4": {
+     "tok_per_s": {
+      "mean": 17.971905726617482,
+      "stdev": 0.15794430138937934,
+      "min": 17.851906125956386,
+      "max": 18.15084447860922,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.20143321092066527,
+      "stdev": 0.002769296276121169,
+      "min": 0.19849235442342056,
+      "max": 0.20399107843743033,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 41.314042746665415,
+      "stdev": 3.438051391007344,
+      "min": 37.44292223999764,
+      "max": 44.01184763550009,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 11.36830172574931,
+      "stdev": 1.251164875736293,
+      "min": 10.615370791751047,
+      "max": 12.812584968751253,
+      "n": 3
+     },
+     "mean_output_tokens": 89.22916666666667,
+     "mean_prompt_tokens": 1666.3125
+    },
+    "8": {
+     "tok_per_s": {
+      "mean": 17.7140500298446,
+      "stdev": 0.1972505484328918,
+      "min": 17.493267143151673,
+      "max": 17.872907611522173,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.20588441776128774,
+      "stdev": 0.0009108693738700475,
+      "min": 0.20491037849982657,
+      "max": 0.20671512133709513,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 74.71347317358352,
+      "stdev": 1.0067888636113729,
+      "min": 73.5758591875001,
+      "max": 75.48964368774796,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 25.18332836791463,
+      "stdev": 0.2722405754642368,
+      "min": 24.878996677000032,
+      "max": 25.403696833247523,
+      "n": 3
+     },
+     "mean_output_tokens": 86.04166666666667,
+     "mean_prompt_tokens": 1666.3125
+    }
+   }
+  },
+  "llamacpp-q8": {
+   "config": {
+    "name": "llamacpp-q8",
+    "runtime": "llamacpp",
+    "quant": "Q8_0",
+    "model": "qwen3:8b-q8_0",
+    "port": 11501
+   },
+   "cold": {
+    "launch_to_first_token_s": {
+     "mean": 5.130593471997902,
+     "stdev": 0.3458457382911363,
+     "min": 4.929951832993538,
+     "max": 5.529940166998131,
+     "n": 3
+    },
+    "ready_s": {
+     "mean": 1.6113099023350514,
+     "stdev": 0.24981552152798175,
+     "min": 1.4664151660035714,
+     "max": 1.899771000003966,
+     "n": 3
+    },
+    "peak_rss_mb": 17867,
+    "peak_footprint_mb": 9445
+   },
+   "warm": {
+    "ttft_p50": {
+     "mean": 2.877256652998767,
+     "stdev": 0.09056000168656593,
+     "min": 2.7784261039996636,
+     "max": 2.9562608755004476,
+     "n": 3
+    },
+    "ttft_p95": {
+     "mean": 4.437475176867761,
+     "stdev": 0.016226573415424553,
+     "min": 4.427009383004406,
+     "max": 4.456167347699375,
+     "n": 3
+    },
+    "e2e_p50": {
+     "mean": 5.19051972916471,
+     "stdev": 0.09036155169511266,
+     "min": 5.0874060619971715,
+     "max": 5.255892812499951,
+     "n": 3
+    },
+    "e2e_p95": {
+     "mean": 9.051665532167922,
+     "stdev": 1.1148829339377662,
+     "min": 7.830069356703825,
+     "max": 10.014232072798038,
+     "n": 3
+    },
+    "decode_tps_median": {
+     "mean": 27.371158252596516,
+     "stdev": 1.2995549822625792,
+     "min": 25.965192158211075,
+     "max": 28.528330311107656,
+     "n": 3
+    }
+   },
+   "memory": {
+    "peak_rss_mb": 17867,
+    "peak_footprint_mb": 9490
+   },
+   "quality": {
+    "golden": {
+     "cases": 40,
+     "refusal_correctness": 0.95,
+     "citation_validity": 1.0,
+     "out_of_corpus_refused": 7,
+     "out_of_corpus_total": 7,
+     "wrongly_refused": 2,
+     "citation_recall": 0.967741935483871,
+     "fact_coverage": 0.9032258064516129
+    },
+    "heldout": {
+     "cases": 8,
+     "refusal_correctness": 0.875,
+     "citation_validity": 1.0,
+     "out_of_corpus_refused": 3,
+     "out_of_corpus_total": 4,
+     "wrongly_refused": 0,
+     "citation_recall": 1.0,
+     "fact_coverage": 1.0
+    }
+   },
+   "quality_stable_across_reps": true,
+   "identical_text_share_across_reps": 0.8333333333333334,
+   "same_decision_share_across_reps": 1.0,
+   "yes_no_unstable_across_reps": [],
+   "prefill_share_of_e2e_median": 0.6105641229271055,
+   "think_share": 0.0,
+   "truncated_share": 0.0,
+   "mean_prompt_tokens": 1677.5416666666667,
+   "mean_output_tokens": 65.14583333333333,
+   "prompt_tokens_by_case": {
+    "a50-chatbot-disclosure": 1550,
+    "a50-chatbot-exception": 1694,
+    "a50-machine-readable": 1686,
+    "a50-deepfake": 1851,
+    "a50-satire": 1662,
+    "a50-editorial-text": 1913,
+    "a50-timing": 1449,
+    "a50-emotion": 1196,
+    "a50-codes": 1534,
+    "a99-art5-fine": 1429,
+    "a99-transparency-fine": 1714,
+    "a99-false-info": 2086,
+    "a99-sme": 1495,
+    "a99-deployer-fine": 1598,
+    "a99-criteria": 1496,
+    "a113-application": 2212,
+    "a113-prohibitions": 1699,
+    "a113-annex-iii": 1548,
+    "a113-annex-i": 1562,
+    "a4-literacy": 1636,
+    "a4-no-guarantee": 1586,
+    "a5-social-scoring": 1555,
+    "a5-emotion-workplace": 1358,
+    "a5-face-scraping": 2326,
+    "a5-predictive-policing": 2002,
+    "a5-realtime-biometric": 1962,
+    "a6-annex-iii-exception": 1337,
+    "a6-documentation": 1336,
+    "a26-logs": 1404,
+    "a26-workers": 1473,
+    "a26-oversight": 1247,
+    "a26-biometric-48h": 2743,
+    "a26-deployer-chatbot-multihop": 1304,
+    "ooc-gdpr-fine": 1702,
+    "ooc-gpai-flops": 1613,
+    "ooc-data-governance": 1317,
+    "ooc-ai-office": 1199,
+    "ooc-us-law": 1315,
+    "ooc-sandbox": 2077,
+    "ooc-definition-ai-system": 1961,
+    "h-a50-public-deepfake-crime": 2391,
+    "h-a99-midcap": 1202,
+    "h-a113-art102": 2075,
+    "h-a26-cooperate": 1248,
+    "h-ooc-copyright": 1649,
+    "h-ooc-conformity": 2118,
+    "h-ooc-ce-marking": 1875,
+    "h-ooc-market-surveillance": 2137
+   },
+   "decisions_by_case": {
+    "a50-chatbot-disclosure": false,
+    "a50-chatbot-exception": false,
+    "a50-machine-readable": false,
+    "a50-deepfake": false,
+    "a50-satire": false,
+    "a50-editorial-text": false,
+    "a50-timing": false,
+    "a50-emotion": false,
+    "a50-codes": false,
+    "a99-art5-fine": false,
+    "a99-transparency-fine": false,
+    "a99-false-info": false,
+    "a99-sme": false,
+    "a99-deployer-fine": false,
+    "a99-criteria": false,
+    "a113-application": false,
+    "a113-prohibitions": false,
+    "a113-annex-iii": false,
+    "a113-annex-i": false,
+    "a4-literacy": false,
+    "a4-no-guarantee": true,
+    "a5-social-scoring": false,
+    "a5-emotion-workplace": false,
+    "a5-face-scraping": false,
+    "a5-predictive-policing": false,
+    "a5-realtime-biometric": false,
+    "a6-annex-iii-exception": false,
+    "a6-documentation": false,
+    "a26-logs": false,
+    "a26-workers": false,
+    "a26-oversight": true,
+    "a26-biometric-48h": false,
+    "a26-deployer-chatbot-multihop": false,
+    "ooc-gdpr-fine": true,
+    "ooc-gpai-flops": true,
+    "ooc-data-governance": true,
+    "ooc-ai-office": true,
+    "ooc-us-law": true,
+    "ooc-sandbox": true,
+    "ooc-definition-ai-system": true,
+    "h-a50-public-deepfake-crime": false,
+    "h-a99-midcap": false,
+    "h-a113-art102": false,
+    "h-a26-cooperate": false,
+    "h-ooc-copyright": true,
+    "h-ooc-conformity": false,
+    "h-ooc-ce-marking": true,
+    "h-ooc-market-surveillance": true
+   },
+   "polarity_by_case": {
+    "a50-chatbot-disclosure": "ja",
+    "a50-chatbot-exception": null,
+    "a50-machine-readable": null,
+    "a50-deepfake": null,
+    "a50-satire": "nein",
+    "a50-editorial-text": "ja",
+    "a50-timing": null,
+    "a50-emotion": null,
+    "a50-codes": null,
+    "a99-art5-fine": null,
+    "a99-transparency-fine": null,
+    "a99-false-info": null,
+    "a99-sme": null,
+    "a99-deployer-fine": null,
+    "a99-criteria": null,
+    "a113-application": null,
+    "a113-prohibitions": null,
+    "a113-annex-iii": null,
+    "a113-annex-i": null,
+    "a4-literacy": null,
+    "a4-no-guarantee": null,
+    "a5-social-scoring": "ja",
+    "a5-emotion-workplace": "nein",
+    "a5-face-scraping": "nein",
+    "a5-predictive-policing": "ja",
+    "a5-realtime-biometric": null,
+    "a6-annex-iii-exception": null,
+    "a6-documentation": null,
+    "a26-logs": null,
+    "a26-workers": null,
+    "a26-oversight": null,
+    "a26-biometric-48h": null,
+    "a26-deployer-chatbot-multihop": null,
+    "ooc-gdpr-fine": null,
+    "ooc-gpai-flops": null,
+    "ooc-data-governance": null,
+    "ooc-ai-office": null,
+    "ooc-us-law": null,
+    "ooc-sandbox": null,
+    "ooc-definition-ai-system": null,
+    "h-a50-public-deepfake-crime": "ja",
+    "h-a99-midcap": null,
+    "h-a113-art102": null,
+    "h-a26-cooperate": "ja",
+    "h-ooc-copyright": null,
+    "h-ooc-conformity": null,
+    "h-ooc-ce-marking": null,
+    "h-ooc-market-surveillance": null
+   },
+   "sweep": {
+    "1": {
+     "tok_per_s": {
+      "mean": 12.217781841303045,
+      "stdev": 0.1470952120008184,
+      "min": 12.04797026447366,
+      "max": 12.305853490517567,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.14420190523260076,
+      "stdev": 0.00412968282993138,
+      "min": 0.14178123076562435,
+      "max": 0.14897026602131264,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 10.525556604250596,
+      "stdev": 1.211941049249665,
+      "min": 9.142955302249902,
+      "max": 11.404237448003187,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 4.520551805416592,
+      "stdev": 0.1617849147542918,
+      "min": 4.394663999995828,
+      "max": 4.70303044775028,
+      "n": 3
+     },
+     "mean_output_tokens": 84.79166666666667,
+     "mean_prompt_tokens": 1662.3125
+    },
+    "2": {
+     "tok_per_s": {
+      "mean": 16.43280629215228,
+      "stdev": 0.8865250469109337,
+      "min": 15.420372168272571,
+      "max": 17.07001769520418,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.1968043508759505,
+      "stdev": 0.006024313685984506,
+      "min": 0.19008162919288224,
+      "max": 0.20171365075573622,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 16.44134283008255,
+      "stdev": 0.21361952610462265,
+      "min": 16.220187031749447,
+      "max": 16.64652985450084,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 5.288957784749073,
+      "stdev": 0.28720956165241057,
+      "min": 5.114290895748127,
+      "max": 5.620438604250012,
+      "n": 3
+     },
+     "mean_output_tokens": 83.45833333333333,
+     "mean_prompt_tokens": 1662.3125
+    },
+    "4": {
+     "tok_per_s": {
+      "mean": 18.90971486765283,
+      "stdev": 1.1001363398590158,
+      "min": 17.645422937447815,
+      "max": 19.648979471153375,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.23216275646459214,
+      "stdev": 0.014640673201887826,
+      "min": 0.21750906548471885,
+      "max": 0.24679037707120383,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 29.168967781250103,
+      "stdev": 3.0648675676136237,
+      "min": 26.07948514575037,
+      "max": 32.20861243725267,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 11.454052527581249,
+      "stdev": 2.51805843894459,
+      "min": 9.883905364251405,
+      "max": 14.35846485424554,
+      "n": 3
+     },
+     "mean_output_tokens": 81.5,
+     "mean_prompt_tokens": 1662.3125
+    },
+    "8": {
+     "tok_per_s": {
+      "mean": 19.81060215680164,
+      "stdev": 1.30967792555912,
+      "min": 18.545555475249,
+      "max": 21.160759762936248,
+      "n": 3
+     },
+     "req_per_s": {
+      "mean": 0.23745082896943262,
+      "stdev": 0.016220685979387032,
+      "min": 0.21914984313440475,
+      "max": 0.25005329114252584,
+      "n": 3
+     },
+     "e2e_p95": {
+      "mean": 61.342702958417554,
+      "stdev": 6.612168633232415,
+      "min": 55.55981472950043,
+      "max": 68.5514873227512,
+      "n": 3
+     },
+     "ttft_p95": {
+      "mean": 25.692110513916607,
+      "stdev": 2.108240086211268,
+      "min": 24.474752093497955,
+      "max": 28.126496469001722,
+      "n": 3
+     },
+     "mean_output_tokens": 83.45833333333333,
+     "mean_prompt_tokens": 1662.3125
+    }
+   }
+  }
+ },
+ "agreement": {
+  "llamacpp-q4 vs llamacpp-q8": 0.9791666666666666,
+  "llamacpp-q4 vs mlx-4bit": 1.0,
+  "llamacpp-q4 vs ollama-q4": 1.0,
+  "llamacpp-q4 vs ollama-q8": 1.0,
+  "llamacpp-q8 vs mlx-4bit": 0.9791666666666666,
+  "llamacpp-q8 vs ollama-q4": 0.9791666666666666,
+  "llamacpp-q8 vs ollama-q8": 0.9791666666666666,
+  "mlx-4bit vs ollama-q4": 1.0,
+  "mlx-4bit vs ollama-q8": 1.0,
+  "ollama-q4 vs ollama-q8": 1.0
+ },
+ "prompt_tokens_max_diff_across_configs": 4,
+ "yes_no_flips": {
+  "llamacpp-q4 vs llamacpp-q8": [],
+  "llamacpp-q4 vs mlx-4bit": [
+   "a5-predictive-policing"
+  ],
+  "llamacpp-q4 vs ollama-q4": [
+   "a5-predictive-policing"
+  ],
+  "llamacpp-q4 vs ollama-q8": [],
+  "llamacpp-q8 vs mlx-4bit": [
+   "a5-predictive-policing"
+  ],
+  "llamacpp-q8 vs ollama-q4": [
+   "a5-predictive-policing"
+  ],
+  "llamacpp-q8 vs ollama-q8": [],
+  "mlx-4bit vs ollama-q4": [],
+  "mlx-4bit vs ollama-q8": [
+   "a5-predictive-policing"
+  ],
+  "ollama-q4 vs ollama-q8": [
+   "a5-predictive-policing"
+  ]
+ }
+}

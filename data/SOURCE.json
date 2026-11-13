@@ -1,0 +1,24 @@
+{
+  "from": "agentic-rag-mastra",
+  "commit": "798b46ca131e01d56dc88fe669012d42193e29fa",
+  "files": {
+    "chunks.json": {
+      "source": "corpus/chunks.json",
+      "sha256": "47c55126a879a8e8f9c0d0ea6c11c48790a49270717c2b05d232bbdd00ec1245"
+    },
+    "golden.jsonl": {
+      "source": "golden/v1.jsonl",
+      "sha256": "1950df15a20572c62d564365c9bd2a4570a4416771abf618bb7936d95069e575"
+    },
+    "heldout.jsonl": {
+      "source": "golden/heldout.jsonl",
+      "sha256": "ac37191a9ceb1d139d26d6939ebb471defea7da4d4b7dff01f7f0cb16f3079f6"
+    }
+  },
+  "retrieval": {
+    "embedding": "bge-m3 (Ollama)",
+    "similarity": "cosine",
+    "top_k": 5,
+    "query": "full question"
+  }
+}

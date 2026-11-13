@@ -1,0 +1,8 @@
+{"id":"h-a50-public-deepfake-crime","question":"Gibt es eine Ausnahme von der Deepfake-Offenlegungspflicht für die Strafverfolgung?","expected_outcome":"answered","expected_chunks":["art50-p4"],"expected_facts":["Straftaten"],"tags":["single"]}
+{"id":"h-a99-midcap","question":"Was gilt bei Geldbußen für kleine Midcap-Unternehmen?","expected_outcome":"answered","expected_chunks":["art99-p6a"],"expected_facts":["niedrigere"],"tags":["numerical"]}
+{"id":"h-a113-art102","question":"Ab wann gelten die Artikel 102 bis 110?","expected_outcome":"answered","expected_chunks":["art113-p0"],"expected_facts":["27. Juli 2026"],"tags":["numerical"]}
+{"id":"h-a26-cooperate","question":"Müssen Betreiber von Hochrisiko-KI-Systemen mit den zuständigen Behörden zusammenarbeiten?","expected_outcome":"answered","expected_chunks":["art26-p12"],"expected_facts":["zusammen"],"tags":["single"]}
+{"id":"h-ooc-copyright","question":"Welche Urheberrechtspflichten haben Anbieter von KI-Modellen mit allgemeinem Verwendungszweck beim Training?","expected_outcome":"refused","expected_chunks":[],"tags":["out-of-corpus"]}
+{"id":"h-ooc-conformity","question":"Wie läuft das Konformitätsbewertungsverfahren für Hochrisiko-KI-Systeme ab?","expected_outcome":"refused","expected_chunks":[],"tags":["out-of-corpus"]}
+{"id":"h-ooc-ce-marking","question":"Wo muss die CE-Kennzeichnung bei einem Hochrisiko-KI-System angebracht werden?","expected_outcome":"refused","expected_chunks":[],"tags":["out-of-corpus"]}
+{"id":"h-ooc-market-surveillance","question":"Welche Befugnisse haben Marktüberwachungsbehörden bei der Prüfung von KI-Systemen nach Artikel 74?","expected_outcome":"refused","expected_chunks":[],"tags":["out-of-corpus"]}
