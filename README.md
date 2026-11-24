@@ -247,3 +247,8 @@ for answer polarity, not only for citations.
   `summary.md` lists yes/no flips separately for that reason; a polarity check belongs in the gate.
 - `mlx-8bit` is not measured: its run exhausted memory on the shared machine and was not repeated.
   The harness has no memory ceiling or low-memory abort yet; both are needed before a rerun.
+
+## Intent
+
+[`ISA.md`](ISA.md) (German) is the spec this repo was built against: what "done" meant, the probe
+that would falsify each criterion, the evidence recorded for it, and the limits left open on purpose.
